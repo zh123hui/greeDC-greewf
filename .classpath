@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+	<classpathentry kind="lib" path="webroot/WEB-INF/lib/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="webroot/WEB-INF/lib/javassist-3.11.0.GA.jar"/>
+	<classpathentry kind="lib" path="webroot/WEB-INF/lib/freemarker-2.3.16.jar"/>
+	<classpathentry kind="lib" path="webroot/WEB-INF/lib/struts2-json-plugin-2.2.1.jar" sourcepath="C:/Documents and Settings/Administrator/.m2/repository/org/apache/struts/struts2-json-plugin/2.2.1/struts2-json-plugin-2.2.1-sources.jar"/>
+	<classpathentry kind="lib" path="webroot/WEB-INF/lib/commons-digester-1.8.1.jar" sourcepath="D:/jarAndSource/commons-digester-1.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="lib/servlet-2_5-api.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/705-eas-lib"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/eas"/>
+	<classpathentry kind="output" path="webroot/WEB-INF/classes"/>
+</classpath>

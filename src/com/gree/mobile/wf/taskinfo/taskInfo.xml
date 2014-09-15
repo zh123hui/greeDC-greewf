@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taskInfo>
+	<bosType>4A44F49F</bosType>
+	<bosTypeName>费用报销单</bosTypeName>
+	<view hiddenIfEmpty="">
+		<groupTable title="" >
+			<rowItem title="" propName="" format="" valueToText="" />
+		</groupTable>
+		<listTable title="" propName="">
+			<rowItem title="" propName="" format="" valueToText="" />
+		</listTable>
+	</view>
+</taskInfo>

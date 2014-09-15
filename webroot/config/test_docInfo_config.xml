@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taskInfo>
+	<bosType>4A44F49F</bosType>
+	<bosTypeName>费用报销单</bosTypeName>
+	<defaultView>fuKuan</defaultView>
+	<!-- 简单视图 -->
+	<simpleView viewName="simple" hiddenIfEmpty="">
+		<groupTable title="" >
+			<propItem title="" propName="" format="" valueToText="" />
+		</groupTable>
+		<listTable title="" propName="">
+			<propItem title="" propName="" format="" valueToText="" />
+		</listTable>
+	</simpleView>
+	
+	<!-- 网格视图 -->
+	<gridView viewName="jieKuan" title="借款申请">
+		<!-- 行项，一个属性占一行 -->
+		<propItem title="单据编号" propName="" />
+		<!-- 行单元，允许一行放两个行项 -->
+		<rowCell>
+			<propItem title="日期" propName="" />
+			<propItem title="申请人" propName="" />
+		</rowCell>
+		<propItem title="借款事由" propName="" />
+		<propItem title="借款公司" propName="" />
+		<propItem title="借款金额" propName="" />
+	</gridView>
+	
+	<gridView viewName="fuKuan" title="付款申请">
+		<propItem title="单据编号" propName="" />
+		<rowCell>
+			<propItem title="日期" propName="" />
+			<propItem title="经办人" propName="" />
+		</rowCell>
+		<propItem title="合同名称" propName="" />
+		<propItem title="合同编号" propName="" />
+		<!-- 子网格视图组，即按钮组 -->
+		<subGridViewGroup>
+			<!-- 子网格视图 -->
+			<gridView title="合同资料" propName="">
+				<propItem title="单据编号" propName="" />
+				<propItem title="所属公司" propName="" />
+				<rowCell>
+					<propItem title="日期" propName="" />
+					<propItem title="经办人" propName="" />
+				</rowCell>
+			</gridView>
+			
+			<gridView title="付款历史" propName="">
+				<propItem title="累计支付" propName="" />
+				<propItem title="未付金额" propName="" />
+				<propItem title="本次申请" propName="" />
+				<!-- 单元迭代器 -->
+				<iteratorCell propName="">
+					<propItem title="日期" propName="" />
+					<propItem title="金额" propName="" />
+				</iteratorCell>
+			</gridView>
+			
+			<gridView title="经办人意见" propName="">
+				<propItem title="经办人意见" propName="" twoLine="true"/>
+			</gridView>
+		</subGridViewGroup>
+	</gridView>
+	
+	
+	<gridView viewName="baoXiao" title="日常费用报销">
+		<propItem title="单据编号" propName="" />
+		<rowCell>
+			<propItem title="日期" propName="" />
+			<propItem title="申请人" propName="" />
+		</rowCell>
+		<propItem title="费用合计" propName="" />
+		<subGridViewGroup>
+			<gridView title="费用明细" propName="">
+				<propItem title="费用合计" titleCss="" propName="" />
+				<propItem title="核定金额" propName="" />
+				<iteratorCell propName="">
+					<propItem title="费用类型" propName="" />
+					<propItem title="费用说明" propName="" />
+					<propItem title="金额" propName="" />
+					<propItem title="审定金额" propName="" />
+				</iteratorCell>
+			</gridView>
+		</subGridViewGroup>
+	</gridView>
+	
+</taskInfo>

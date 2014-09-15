@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<project name="greemobile" default="jar" basedir=".">
+	
+	<tstamp>
+		<format pattern="yyyyMMddHHmmss" property="NOW" />
+	</tstamp>
+	
+	<target name="jar" >
+    	<mkdir dir="./target"/>
+		<delete file="target/gree-wf.jar" ></delete>
+	    <jar destfile="target/gree-wf.jar" basedir="./webroot/WEB-INF/classes" >
+		<include name="**/*"/>
+    	<manifest>
+			<attribute name="Main-class" value="Main"/>
+			<attribute name="Jar-date" value="${NOW}"/>
+		</manifest>
+		</jar>
+	</target>
+	
+	
+	<target name="jar-to-local" >
+	    <jar destfile="E:\Kingdee\eas\server\deploy\eas.ear\mywf.war\WEB-INF\lib\gree-wf.jar" basedir="./webroot/WEB-INF/classes" >
+		<include name="**/*"/>
+    	<manifest>
+			<attribute name="Main-class" value="Main"/>
+			<attribute name="Jar-date" value="${NOW}"/>
+		</manifest>
+		</jar>
+	</target>
+	
+	<target name="copy" >
+		<copy todir="F:\all-project\test-common" overwrite="true">
+			<fileset dir="E:\eas_workspace\test-common">
+				<include name="**/*" />
+				<exclude name=".svn"/>
+			</fileset>
+		</copy>
+	</target>
+</project>

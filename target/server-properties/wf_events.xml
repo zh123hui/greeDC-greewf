@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events>
+	<event name='OnActivitiyInit' handler='com.gree.mobile.push4wf.PushActivityEventHandler'/> 
+</events>

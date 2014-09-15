@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	  "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	  "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.mapper.alwaysSelectFullNamespace" value="true" />
+	<constant name="struts.devMode" value="false" />
+	<package name="gree-default" extends="json-default">
+		<interceptors>
+			<interceptor name="gree-actionPostBefore" class="com.gree.mobile.wf.interceptor.ActionPostBeforeInterceptor" />
+			<interceptor-stack name="gree-exception">
+				<interceptor-ref name="exception">
+					<param name="logEnabled">true</param>
+					<param name="logLevel">info</param>
+					<param name="logCategory">com.gree.mobile.exception</param>
+				</interceptor-ref>
+			</interceptor-stack>  
+			<interceptor-stack name="gree-defaultStack">
+				<interceptor-ref name="gree-exception"/>
+				<interceptor-ref name="json"/>     
+				<interceptor-ref name="gree-actionPostBefore"/>     
+			</interceptor-stack>  
+		</interceptors>  
+		<default-interceptor-ref name="gree-defaultStack"/>   
+		<global-results>   
+            <result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="root">commonResult</param>
+				<param name="enableGZIP">true</param>
+			</result>
+            <result name="error" type="dispatcher">
+				/error.action
+			</result>
+        </global-results>
+	</package> 
+	<package name="gree-error" namespace="/" extends="gree-default">
+		<default-interceptor-ref name="gree-exception" />
+		<action name="error" class="gree.error.ErrorAction" />
+	</package>
+	<package name="gree-wf" namespace="/" extends="gree-default">
+		<action name="login" class="gree.LoginAction"  />
+		<action name="logout" class="gree.LogoutAction"  />
+<!-- 		<action name="bindPush" class="gree.BindPushAction"  /> -->
+		<action name="taskList" class="gree.wf.TaskListAction"  />
+		<action name="taskInfo" class="gree.wf.TaskInfoAction"  >
+			<result name="error" type="dispatcher">/wf/taskInfo_error.jsp?errorMsg=${commonResult.message}</result>
+		</action>
+		<action name="taskActivityInfo" class="gree.wf.TaskActivityInfoAction"  />
+		<action name="attachmentList" class="gree.wf.AttachmentListAction"  />
+		<action name="dealDoc" class="gree.wf.DealDocAction"  />
+		<action name="deliverTask" class="gree.wf.DeliverTaskAction"  />
+		<action name="docDealPath" class="gree.wf.DocDealPathAction"  />
+		<action name="downloadAttachment" class="gree.wf.DownloadAttachmentAction"  />
+		<action name="searchPerson" class="gree.wf.SearchPersonAction"  />
+		
+		<action name="dealtTaskList" class="gree.wf.DealtTaskListAction"  />
+		<action name="myProcList" class="gree.wf.MyProcListAction"  />
+	</package>
+</struts>

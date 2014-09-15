@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="gree.wf.PushDAO" class="com.gree.mobile.wf.push.PushDAO" >
+	</bean>
+<!-- 	<bean id="gree.BindPushAction" class="com.gree.mobile.wf.action.BindPushAction" scope="prototype"> -->
+<!-- 	</bean> -->
+	
+	<bean id="gree.error.ErrorAction" class="com.gree.mobile.common.error.action.ErrorAction" scope="prototype">
+	</bean>
+	
+	<bean id="gree.wf.SearchPersonAction" class="com.gree.mobile.wf.action.SearchPersonAction" scope="prototype">
+	</bean>
+
+	<bean id="gree.LoginAction" class="com.gree.mobile.wf.action.LoginAction" scope="prototype">
+	</bean>
+	
+	<bean id="gree.LogoutAction" class="com.gree.mobile.wf.action.LogoutAction" scope="prototype">
+	</bean>
+	
+	<bean id="gree.wf.TaskListAction" class="com.gree.mobile.wf.action.TaskListAction" scope="prototype">
+	</bean>
+	
+	<bean id="gree.wf.TaskInfoAction" class="com.gree.mobile.wf.action.TaskInfoAction" scope="prototype">
+	</bean>
+	
+	<bean id="gree.wf.TaskActivityInfoAction" class="com.gree.mobile.wf.action.TaskActivityInfoAction" scope="prototype">
+	</bean>
+	
+	<bean id="gree.wf.AttachmentListAction" class="com.gree.mobile.wf.action.AttachmentListAction" scope="prototype">
+	</bean>
+	
+	<bean id="gree.wf.DealDocAction" class="com.gree.mobile.wf.action.DealDocAction" scope="prototype">
+	</bean>
+	
+	<bean id="gree.wf.DeliverTaskAction" class="com.gree.mobile.wf.action.DeliverTaskAction" scope="prototype">
+	</bean>
+	
+	<bean id="gree.wf.DocDealPathAction" class="com.gree.mobile.wf.action.DocDealPathAction" scope="prototype">
+	</bean>
+	
+	<bean id="gree.wf.DownloadAttachmentAction" class="com.gree.mobile.wf.action.DownloadAttachmentAction" scope="prototype">
+	</bean>
+
+	<bean id="gree.wf.DealtTaskListAction" class="com.gree.mobile.wf.action.DealtTaskListAction" scope="prototype">
+	</bean>
+
+	<bean id="gree.wf.MyProcListAction" class="com.gree.mobile.wf.action.MyProcListAction" scope="prototype">
+	</bean>
+
+</beans>
